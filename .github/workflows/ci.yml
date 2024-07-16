@@ -16,4 +16,4 @@ jobs:
         
 
       - name: Run tests
-        run: ./test_api.py
+        run: ctest --test-dir build
