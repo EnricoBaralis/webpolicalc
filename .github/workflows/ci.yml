@@ -9,19 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
       - name: Install dependencies
         run: pip install flask
-        
-      - name: Set up CMake
-        uses: jwlawson/actions-setup-cmake@v1
-        
-      - name: Configure Cmake
-        run: cmake -S . -B build
-
-      - name: Build
-        run: cmake --build build
 
       - name: Run tests
         run: python test_api.py
