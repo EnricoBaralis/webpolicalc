@@ -13,7 +13,9 @@ jobs:
 
       - name: Set up CMake
         uses: jwlawson/actions-setup-cmake@v1
-        
+
+      - name: Install dependencies
+        run: pip install flask
 
       - name: Run tests
         run: python test_api.py
